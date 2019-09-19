@@ -15,9 +15,9 @@
 
 function countUniqueValues(values){
 	let unique = 0;
-	let current = "";
+	let current = values[0]-1;
 	for(let i=0; i < values.length; i++){
-		// console.log(current, values[i])
+		// console.log('current: '+ current, 'value: '+ values[i], unique)
 		if (current < values[i]){
 			current = values[i];
 			unique++
