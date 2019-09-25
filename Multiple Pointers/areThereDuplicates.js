@@ -9,5 +9,21 @@
 // areThereDuplicates('a', 'b', 'c', 'a') // true
 
 function areThereDuplicates(){
-	
+	let left=0;
+	let right = arguments.length - 1;
+	while(left < right){
+		if(arguments[left] === arguments[right]){
+			console.log(true)
+			return true
+		} else {
+			left++;
+		}
+	}
+
+	console.log(false)
+	return false
 }
+
+areThereDuplicates(1, 2, 3) // false;
+areThereDuplicates(1, 2, 2) // true;
+areThereDuplicates('a', 'b', 'c', 'a') // true
