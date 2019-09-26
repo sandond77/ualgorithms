@@ -10,7 +10,10 @@
 // findLongestSubstring('longestsubstring') //8
 // findLongestSubstring('thisishowedoit) //6
 
+1. Create an object for seen characters. 
+2. Loop through string. Check object to see if character has been seen yet
+3. If a repeated characer appears, close the 
+
 
 function findLongestSubstring(){
-
 }
