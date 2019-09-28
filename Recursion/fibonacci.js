@@ -14,3 +14,9 @@ function fib(num){
 
 
 fib(3) // 3
+
+Given Solution
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
