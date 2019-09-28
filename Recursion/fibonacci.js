@@ -5,6 +5,12 @@
 // fib(28) // 317881
 // fib(35) //9227465
 
-function fib(){
-	
+function fib(num){
+	if(num <= 2) {
+		return 1
+	}
+	return fib(num-2)+fib(num-1)
 }
+
+
+fib(3) // 3
