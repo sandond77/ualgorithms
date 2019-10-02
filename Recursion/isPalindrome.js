@@ -7,6 +7,18 @@
 // isPalindrome('amanaplanacanalpanama') // true
 // isPalindrome('amanaplanacanalpandemonium') //false
 
-function isPalindrome(){
+function isPalindrome(str){
+	if(!str[0]) { //if it is a palindrome, all letters would be sliced out and str[0] should not exist
+		return true
+	}
 
+	if(str[0] === str.slice(-1)) {
+		return isPalindrome(str.slice(1,-1))
+	}
+
+	return false
 }
+
+// isPalindrome('awesome') // false
+
+isPalindrome('a')
