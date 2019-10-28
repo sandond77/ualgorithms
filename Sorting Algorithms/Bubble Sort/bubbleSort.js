@@ -24,29 +24,39 @@ function bubbleSort(arr){
 bubbleSort([37,45,29,8])
 
 // Given Solution using ES5
-// function bubbleSort(arr){
-// 	for(let i=arr.length; i > 0; i--){
-// 		console.log(arr, arr[j], arr[j+1])
-// 		if(arr[j] > arr[j+1]){
-// 			let temp = arr[j];
-// 			arr[j] = arr[j+1];
-// 			arr[j+1] = temp;
-// 		}
-// 	}
-// 	return arr
-// }
+function bubbleSort(arr){
+	let noSwaps;
+	for(let i=arr.length; i > 0; i--){
+		noSwaps = true;
+		for(let j=0; j<i-1; j++){
+			console.log(arr, arr[j], arr[j+1])
+			if(arr[j] > arr[j+1]){
+				let temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+				noSwaps = false;
+			}
+		}
 
+		if (noSwaps) break;
+	}
+	return arr
+}
+
+bubbleSort([1,2,8,3,4,5])
 // Given Solution Using ES6/ES2015
 
 // Given Solution using ES5
 // function bubbleSort(arr){
-	// const swap = (arr,index1, index2) => {
-	// 	[arr[index1], arr[index2]] = [arr[index2],arr[index1]];
-	// }
+// 	const swap = (arr,index1, index2) => {
+// 		[arr[index1], arr[index2]] = [arr[index2],arr[index1]];
+// 	}
 // 	for(let i=arr.length; i > 0; i--){
-// 		console.log(arr, arr[j], arr[j+1])
-// 		if(arr[j] > arr[j+1]){
-// 			swap(arr, j, j+1)
+// 		for(let j=0; j<i-1; j++){
+// 			console.log(arr, arr[j], arr[j+1])
+// 			if(arr[j] > arr[j+1]){
+// 				swap(arr,j, j+1)
+// 			}
 // 		}
 // 	}
 // 	return arr
