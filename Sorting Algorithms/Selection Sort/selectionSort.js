@@ -56,7 +56,6 @@ function selectionSort(arr){
 	}
 	return arr
 }
- 
 selectionSort([5,3,4,1,2])
 
 //Given Solution using es6/es2015
@@ -74,3 +73,4 @@ function selectionSort(arr){
 	}
 	return arr
 }
+selectionSort([5,3,4,1,2])
