@@ -6,6 +6,26 @@
 
 
 function insertionSort(arr){
+	function swap(arr, index1, index2){
+		let temp = arr[index1];
+		arr[index1] = arr[index2];
+		arr[index2] = temp;
+	}
 
+	// let swapped = false;
+	for(let i=1; i<arr.length; i++){
+		for (let j=i-1; j >= 0; j--){
+			console.log('comparing '+ arr[i] +' vs '+ arr[j])
+			console.log('current i is:' + i + ' and current j is:' +j)
+			if(arr[j]>arr[i]){
+				swap(arr, i, j)
+				i--
+			} else 
+			console.log(arr)
+		}
+		
+	}
 	return arr
 }
+
+insertionSort([5,3,1,2,4])
