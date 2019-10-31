@@ -14,13 +14,16 @@ function insertionSort(arr){
 
 	// let swapped = false;
 	for(let i=1; i<arr.length; i++){
-		for (let j=i-1; j >= 0; j--){
-			console.log('comparing '+ arr[i] +' vs '+ arr[j])
-			console.log('current i is:' + i + ' and current j is:' +j)
+		// let currentVal = arr[i];
+		for (let j=i-1; j >= 0 && arr[j] > arr[i]; j--){  //need second conditional on the j to stop the continuous looping once sorting as finished
+			// console.log('-------')
+			// console.log('comparing '+ arr[i] +' vs '+ arr[j])
+			// console.log('current i is:' + i + ' and current j is:' +j)
 			if(arr[j]>arr[i]){
 				swap(arr, i, j)
 				i--
-			} else 
+				// console.log('SWAPPING')
+			} 
 			console.log(arr)
 		}
 		
@@ -28,4 +31,4 @@ function insertionSort(arr){
 	return arr
 }
 
-insertionSort([5,3,1,2,4])
+insertionSort([5,3,4,1,2])
