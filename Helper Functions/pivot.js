@@ -15,16 +15,15 @@ function swap(arr, index1, index2){
 }
 
 function pivot (arr, start=0, end=arr.length-1){
-	let pivotIndex = start;
-	const pivot = arr[start];
-	for (let i=start; i <= end; i++){
-		if (pivot > arr[i]){	
-			console.log(i, arr[i], pivotIndex, arr[pivotIndex])
-			swap(arr, i, pivotIndex)
-			pivotIndex++;
+	let pivotIndex = 0; 
+	let pivot = arr[start];
+	for (let i=1; i <= end; i++){
+		if (pivot > arr[i]){	//comparison is always being made with the pivot number but it does not move til the end
+			pivotIndex++; //this pivot index increment will tell us where to switch the pivot number at the end
+			swap(arr, i, pivotIndex); //as we compare values, we want to continue to move the smaller values to the start of the array/ left of the pivt
 		}
-		console.log(arr, pivot, pivotIndex)
 	}
+	swap(arr, start, pivotIndex); //moves out pivot number to the correct place based on the pivot index counter
 	return pivotIndex
 }
 
