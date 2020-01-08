@@ -12,9 +12,9 @@ function getDigit(num,index){
 
 
 // Given Solution
-// function getDigit(num, index){
-// 	return Math.floor(Math.abs(num) / Math.pow(10, index)) % 10;
-// }
+function getDigit(num, index){
+	return Math.floor(Math.abs(num) / Math.pow(10, index)) % 10;
+}
 
 
 getDigit(12345,0)
