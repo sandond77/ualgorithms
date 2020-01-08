@@ -1,9 +1,13 @@
 // My Solution
 function getDigit(num,index){
 	str = num.toString();
-	index = Math.abs(index-str.length)
-	console.log(index)
-	return index
+	index = Math.abs(index-str.length)-1
+	if(!str[index]){
+		console.log(0)
+		return 0
+	}
+	console.log(str[index])
+	return str[index]
 }
 
 
@@ -19,3 +23,4 @@ getDigit(12345,2)
 getDigit(12345,3)
 getDigit(12345,4)
 getDigit(12345,5)
+getDigit(7323,0)
