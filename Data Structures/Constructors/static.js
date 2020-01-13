@@ -16,4 +16,4 @@ class Point {
 const p1 = new Point (5,5);
 const p2 = new Point (10,10);
 
-Point.distance(p1,p2) //returns 7.071
+Point.distance(p1,p2) //returns 7.071 

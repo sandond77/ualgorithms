@@ -17,3 +17,4 @@ let firstStudent = new Student("Homer", "Simpson");
 let secondStudent = new Student("Bart", "Simpson")
 
 Student.enrollStudents();
+
