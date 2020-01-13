@@ -54,6 +54,21 @@ class SinglyLinkedList{
 		this.traverse();
 		return current;
 	}
+	
+	shift(){
+		if(!this.head) return undefined;
+		let current = this.head;
+		let newHead = current.next;
+		this.head = newHead;
+		this.length--;
+		if(this.length === 0){
+			this.head = null;
+			this.tail = null;
+			console.log('list is empty')
+		}
+		this.traverse();
+		return current;
+	}
 }
 
 
@@ -62,6 +77,6 @@ list.push("Hi");
 list.push("Bye")
 list.push("!")
 
-list.pop();
-list.pop();
-list.pop();
+list.shift();
+list.shift();
+list.shift();
