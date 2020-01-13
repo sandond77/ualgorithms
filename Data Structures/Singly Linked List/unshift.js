@@ -74,10 +74,10 @@ class SinglyLinkedList{
 		if(!this.head){
 			this.head = newHead;
 			this.tail = newHead;
-			length++;
+		} else {
+			newHead.next = this.head;
+			this.head = newHead;
 		}
-		newHead.next = this.head;
-		this.head = newHead;
 		this.length++;
 		this.traverse();
 		return this
