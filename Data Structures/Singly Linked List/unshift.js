@@ -69,8 +69,18 @@ class SinglyLinkedList{
 		return current;
 	}
 
-	unshift(){
-		
+	unshift(val){
+		let newHead = new Node(val)
+		if(!this.head){
+			this.head = newHead;
+			this.tail = newHead;
+			length++;
+		}
+		newHead.next = this.head;
+		this.head = newHead;
+		this.length++;
+		this.traverse();
+		return this
 	}
 }
 
@@ -80,6 +90,4 @@ list.push("Hi");
 list.push("Bye")
 list.push("!")
 
-list.shift();
-list.shift();
-list.shift();
+list.unshift("NEW")
