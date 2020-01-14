@@ -89,7 +89,7 @@ class SinglyLinkedList{
 		let current = this.head;
 		while(count !== index){
 			current = current.next;
-			current++;
+			count++;
 		}
 		console.log(current);
 		return current;
