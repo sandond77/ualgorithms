@@ -107,6 +107,32 @@ class SinglyLinkedList{
 		return false;
 	}
 
+	insert(value,index){
+		if (index < 0 || index > this.length){
+			console.log(false)
+			return false
+		} else if (index === this.length){
+			return !!this.push(value);
+		} else if (index === 0){
+			return !!this.unshift(value);
+		} else {
+			let newNode = new Node(value);
+			newNode.next = this.get(index);
+			this.get(index-1).next = newNode;
+			this.length++;
+			console.log(true)
+			return true;
+
+			// Given Solution for inserting into list
+			// let newNode = new Node(value);
+			// let prev - this.get(index-1);
+			// let temp = prev.next;
+			// prev.next = newNode;
+			// newNode.next = temp;
+			// this.length++;
+			// return true;
+		}
+	}
 }
 
 
@@ -117,6 +143,10 @@ list.push("!")
 list.push("Hello")
 list.push("World")
 
-list.set("DIE", 7); //should return false
-list.set("ABCD", 3); //should return true and update list
-console.log(list.traverse());
+list.insert("INSERTED",1)
+list.insert("UNSHIFTED",0)
+list.insert("PUSHED LAST",list.length)
+list.insert("SHOULDNT INSERT", list.length+1)
+console.log("--------------------")
+console.log(list)
+// console.log(list.traverse());
