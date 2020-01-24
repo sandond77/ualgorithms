@@ -56,10 +56,11 @@ class DoublyLinkedList{
 		if(this.length===1){
 			this.head = null;
 			this.tail = null;
-		} 
-		this.head = this.head.next;
-		this.head.prev = null;
-		oldHead.next = null;
+		} else {
+			this.head = this.head.next;
+			this.head.prev = null;
+			oldHead.next = null;
+		}
 		this.length--;
 		console.log(oldHead)
 		return oldHead;
