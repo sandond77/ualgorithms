@@ -121,9 +121,9 @@ class DoublyLinkedList{
 			console.log(false)
 			return false
 		} else if (index === 0){
-			this.unshift(value);
+			return !!this.unshift(value);
 		} else if (index === this.length){
-			this.push(value);
+			return !!this.push(value);
 		} else {
 			let newNode = new Node(value);
 			let prevNode = this.get(index-1);
@@ -132,6 +132,7 @@ class DoublyLinkedList{
 			nextNode.prev = newNode;
 			newNode.prev = prevNode;
 			newNode.next = nextNode;
+			this.length++;
 			console.log(true)
 			return true;
 		}
@@ -148,5 +149,7 @@ list.push(5);
 list.push(6);
 
 list.insert(1,"INSERTED")
+list.insert(0,"UNSHIFT")
+list.insert(9,"PUSHED")
 
 console.log(list)
