@@ -105,8 +105,15 @@ class DoublyLinkedList{
 		}
 	}
 
-	set(value){
-		
+	set(index,value){
+		let node = this.get(index);
+		if(!node){
+			console.log(false)
+			return false
+		} else {
+			node.val = value;
+			return true
+		}
 	}
 }
 
@@ -118,6 +125,6 @@ list.push(4);
 list.push(5);
 list.push(6);
 list.unshift(0);
-list.get(6)
+list.set(20,123123213)
 
 // console.log(list)
