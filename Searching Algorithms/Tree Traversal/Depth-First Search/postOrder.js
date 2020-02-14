@@ -78,6 +78,10 @@ class BinarySearchTree {
 		console.log(data);
 		return data;
 	}
+
+	postOrder(){
+		
+	}
 }
 
 
