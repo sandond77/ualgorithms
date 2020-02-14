@@ -80,7 +80,21 @@ class BinarySearchTree {
 	}
 
 	postOrder(){
-		
+		let data = [];
+		traverse(this.root);
+
+		function traverse(node){
+			if(node.left){
+				traverse(node.left);
+			}
+			if(node.right){
+				traverse(node.right);
+			}
+			data.push(node.value);
+		}
+
+		console.log(data);
+		return data;
 	}
 }
 
@@ -97,3 +111,4 @@ tree.insert(15);
 tree.insert(13);
 
 tree.preOrder();
+tree.postOrder();
