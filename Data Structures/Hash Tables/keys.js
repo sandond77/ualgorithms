@@ -84,3 +84,7 @@ ht.set("violet","#DDA0DD");
 
 ht.values();
 ht.keys();
+
+ht.keys().forEach(function(key){
+	console.log(ht.get(key))
+})
