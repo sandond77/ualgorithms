@@ -104,7 +104,7 @@ g.addEdge("E","F");
 				// /				\
 				// D -------------	E
 				// 		\		/
-				// 			E
+				// 			F
 
 g.depthFirstRecursive("A");
 g.depthFirstIterative("A");
