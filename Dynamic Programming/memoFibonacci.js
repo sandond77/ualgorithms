@@ -34,12 +34,12 @@ const { PerformanceObserver, performance } = require('perf_hooks');
 
 
 
-var t0 = performance.now();
-fib1(1000);   // <---- The function you're measuring time for 
-var t1 = performance.now();
-console.log("Call to fib1 took " + (t1 - t0) + " milliseconds.");
+// var t0 = performance.now();
+// fib1(1000);   // <---- The function you're measuring time for 
+// var t1 = performance.now();
+// console.log("Call to fib1 took " + (t1 - t0) + " milliseconds.");
 
-// var t2 = performance.now();
-// fib2(1000);   // <---- The function you're measuring time for 
-// var t3 = performance.now();
-// console.log("Call to fib2 took " + (t3 - t2) + " milliseconds.");
+var t2 = performance.now();
+fib2(1000);   // <---- The function you're measuring time for 
+var t3 = performance.now();
+console.log("Call to fib2 took " + (t3 - t2) + " milliseconds.");
